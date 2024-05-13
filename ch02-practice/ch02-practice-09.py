@@ -26,6 +26,8 @@ cv.imshow("Painting",img)
 
 cv.setMouseCallback("Painting",painting)
 
+print("img=",img.shape)
+
 while(True):
     if cv.waitKey(1)==ord("q"):
         cv.destroyAllWindows()
