@@ -1,6 +1,12 @@
 import cv2 as cv
 import numpy as np
 import time
+
+img=cv.imread("../source/pooh.jpg")
+
+if img is None:
+    print("img is null")
+    
 def my_cvtGray1(bgr_img):
     g=np.zeros([bgr_img.shape[0],bgr_img.shape[1]])
     for r in range(bgr_img.shape[0]):
@@ -13,7 +19,7 @@ def my_cvtGray2(bgr_img):
     g=0.114*bgr_img[:,:,0]+0.587*bgr_img[:,:,1]+0.299*bgr_img[:,:,2]
     return np.uint8(g)
 
-img=cv.imread("../source/pooh.jpg")
+
 
 start=time.time()
 my_cvtGray1(img)
