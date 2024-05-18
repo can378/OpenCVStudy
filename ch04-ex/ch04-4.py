@@ -1,7 +1,7 @@
 #4-4
 import cv2 as cv
 
-img=cv.imread("../source/apples.jpg")
+img=cv.imread("apples.jpg")
 gray=cv.cvtColor(img,cv.COLOR_BGR2GRAY)
 
 if img is None:
